@@ -24,45 +24,109 @@ Para poder sacar el permiso de circulación se deben llenar los siguientes datos
 */
 
 
-function mostrar()
-{
+function mostrar() {
 	let Nombre;
 	let Temperatura;
 	let Sintoma;
-	Nombre=document.getElementById("nombreyapellido").value;
-	Temperatura=parseInt(document.getElementById("temperatura").value);
-	Sintomas=document.getElementById("Sintoma").value;
+	let flag = 0;
+	Nombre = document.getElementById("nombreyapellido").value;
+	Temperatura = parseInt(document.getElementById("temperatura").value);
+	Sintoma = document.getElementById("Sintoma").value;
 	
-	if(Temperatura>=35 && Temperatura<=40)
-	{
+	alert(Nombre);
+	if(!(Temperatura >= 35 && Temperatura <= 40)) {
+		alert("Temperatura incorrecta");
+	}
 
-	
-	
 	if(Temperatura>=38)
 	{
 		alert("Permiso no otorgado");
 	}
-	if(Temperatura<=37 && Sintoma=="Tos")
-	{
-		alert("Permiso otorgado. Por favor no se olvide de toser sobre su codo.");
+    else if (Sintoma=="Tos")
+    {
+	 alert("Permiso otorgado. Por favor no se olvide de toser sobre su codo.");
+	 
 	}
-	if(Sintoma=="Pérdida de olfato" || Sintoma=="Pérdida del gusto")
-	{
-       alert("Permiso otorgado");
+	else if(Sintoma=="pérdida de olfato"||Sintoma=="pérdida del gusto")
+	{ 
+		alert("Permiso otorgado");
 	}
-	if(Sintoma=="Dificultad para respirar");
+	else if(Sintoma=="dificultad para respirar")
 	{
-		alert("Permiso no otorgado");
+		if(Temperatura >= 35 && Temperatura <= 40 )
+		{
+			alert("Permiso no otorgado");
+		}
 	}
-	else
-	{
+    else{
 		alert("Permiso otorgado");
 	}
 
-}
-else{
-	alert("Temperatura incorrecta");
-}
 
-	alert("Hola Mundo");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*alert(Nombre);
+	if (Temperatura >= 35 && Temperatura <= 40) {
+
+
+
+		if (Temperatura > 37 ) {
+			alert("Permiso no otorgado");
+		}
+		else if (Temperatura <=37 && Sintoma == "Tos") {
+			alert("Permiso otorgado. Por favor no se olvide de toser sobre su codo.");
+		}
+		else if (Sintoma == "Pérdida de olfato" || Sintoma == "Pérdida del gusto") {
+			alert("Permiso otorgado");
+		}
+		else if(Sintoma == "Dificultad para respirar")
+		{
+			alert("Permiso no otorgado");
+		}
+        else  
+		{
+			alert("Permiso otorgado");
+		}
+
+	}
+	else {
+		alert("Temperatura incorrecta");
+	}*/
+
+
 }
